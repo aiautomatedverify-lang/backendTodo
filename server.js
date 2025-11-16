@@ -10,11 +10,13 @@ const errorHandler = require('./middlewares/errorHandler');
 const app = express();
 
 // Configure CORS to allow requests from your frontend
-app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:5000', 'https://task9mern.netlify.app'],
-  credentials: true,
-  optionsSuccessStatus: 200
-}));
+// app.use(cors({
+//   origin: ['http://localhost:5173', 'http://localhost:5000', 'https://task9mern.netlify.app'],
+//   credentials: true,
+//   optionsSuccessStatus: 200
+// }));
+app.use(cors());
+
 
 app.use(express.json());
 
